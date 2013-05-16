@@ -1,41 +1,38 @@
-
 Crafty.audio.add({
-    explosion0: [
+  explosion0: [
     game_path + "media/sounds/explodemini.mp3",
     game_path + "media/sounds/explodemini.ogg"
-    ],
-    explosion1: [
+  ],
+  explosion1: [
     game_path + "media/sounds/explode.mp3",
     game_path + "media/sounds/explode.ogg"
-    ],
-    laser1: [
+  ],
+  laser1: [
     game_path + "media/sounds/laser1.mp3",
     game_path + "media/sounds/laser1.ogg"
-    ],
-    laser2: [
+  ],
+  laser2: [
     game_path + "media/sounds/laser2.mp3",
     game_path + "media/sounds/laser2.ogg"
-    ],
-    laser3: [
+  ],
+  laser3: [
     game_path + "media/sounds/laser3.mp3",
     game_path + "media/sounds/laser3.ogg"
-    ],
-    laser4: [
+  ],
+  laser4: [
     game_path + "media/sounds/laser4.mp3",
     game_path + "media/sounds/laser4.ogg"
-    ]
+  ],
+  space: [
+    game_path + "media/music/snuten-kommer.ogg",
+    game_path + "media/music/snuten-kommer.mp3"
+  ],
+  gameover: [
+    game_path + "media/music/alene-eremitt.mp3",
+    game_path + "media/music/alene-eremitt.ogg"
+  ],
+  intro: [
+    game_path + "media/music/im-a-man.ogg",
+    game_path + "media/music/im-a-man.mp3"
+  ]
 });
-
-Crafty.audio.add("space",[
-    game_path + "media/music/through-space.mp3",
-    game_path + "media/music/through-space.ogg"
-    ]);
-
-Crafty.audio.add("gameover",[
-    game_path + "media/music/ambient.ogg",
-    game_path + "media/music/ambient.mp3"
-    ]);
-    Crafty.audio.add("intro",[
-    game_path + "media/music/through-space.ogg",
-    game_path + "media/music/through-space.mp3"
-    ]);
