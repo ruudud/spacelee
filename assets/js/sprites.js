@@ -20,6 +20,10 @@ Crafty.sprite(game_path + "assets/img/ships.png",{
     ship16:[340,48,67,47]
 });
 
+Crafty.sprite(game_path + "assets/img/ship-medium.png",{
+    lee: [0,0,59,100]
+});
+
 Crafty.sprite(5,13,game_path + "assets/img/weapon1_small.png",{
     laser1:[0,0] 
 });

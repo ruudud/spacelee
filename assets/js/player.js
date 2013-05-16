@@ -23,7 +23,7 @@ Crafty.c("Player",{
         overheated:false
     },
     powerups:{},
-    ship:"ship1",
+    ship:"lee",
     bars:{},
     infos:{},
     preparing:true,
