@@ -96,7 +96,7 @@ Crafty.scene("Level1",function(){
         heat:bars.heat.find('.text'),
         shield:bars.shield.find('.text'),
         alert:$('.alert')
-    }
+    };
 
    
         
@@ -104,17 +104,17 @@ Crafty.scene("Level1",function(){
     var spotEnemys = function(frame){   
         //Spot each 50th Fram one Asteroid
  
-        if(frame % 50 == 0 && Crafty("Asteroid").length < 2 && Crafty("SmallAsteroid").length < 8){
+        if(frame % 50 === 0 && Crafty("Asteroid").length < 2 && Crafty("SmallAsteroid").length < 8){
             Crafty.e("Asteroid"); 
         }
         
-        if(frame % 70 == 0 && Crafty("Kamikaze").length < 1){
+        if(frame % 70 === 0 && Crafty("Kamikaze").length < 1){
             Crafty.e("Kamikaze");   
         }
-        if(frame % 80 == 0  && Crafty("Level1").length < 1){
+        if(frame % 80 === 0  && Crafty("Level1").length < 1){
             Crafty.e("Rookie");
         }
-        if(frame % 90 == 0  && Crafty("Level2").length < 1){
+        if(frame % 90 === 0  && Crafty("Level2").length < 1){
             Crafty.e("Level2");
         }
     };
@@ -157,7 +157,7 @@ Crafty.scene("Level1",function(){
     });
     //Bind global Event Show Text
     Crafty.bind("ShowText",function(text){
-        infos.alert.text(text).show().effect('pulsate',500)
+        infos.alert.text(text).show().effect('pulsate',500);
     });
     Crafty.bind("HideText",function(){
         infos.alert.text("").hide(); 
@@ -169,7 +169,24 @@ Crafty.scene("Level1",function(){
         Crafty.audio.play("gameover",-1);
             
     });
-    //Play background music and repeat
-    Crafty.audio.play("space",-1);
+
+    //Play the background music
+    var i, currentSong = Math.floor(Math.random() * 3);
+
+    var playNextSong = function () {
+      console.log('event fired', currentSong);
+      currentSong = ((currentSong + 1) % 3);
+      var nextSong = "space" + currentSong;
+      console.log('next song', nextSong);
+      Crafty.audio.play(nextSong, 1);
+    };
+
+    for (i = 0; i <= 2; i++) {
+      console.log('reg. ev. listener');
+      Crafty.audio.sounds["space" + i].obj.addEventListener('ended', playNextSong);
+    }
+
+    // Start playing the first song
+    playNextSong();
   
 });

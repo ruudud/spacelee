@@ -23,9 +23,17 @@ Crafty.audio.add({
     game_path + "media/sounds/laser4.mp3",
     game_path + "media/sounds/laser4.ogg"
   ],
-  space: [
+  space0: [
     game_path + "media/music/snuten-kommer.ogg",
     game_path + "media/music/snuten-kommer.mp3"
+  ],
+  space1: [
+    game_path + "media/music/going-down.mp3",
+    game_path + "media/music/going-down.ogg"
+  ],
+  space2: [
+    game_path + "media/music/slakter-nilsen.mp3",
+    game_path + "media/music/slakter-nilsen.ogg"
   ],
   gameover: [
     game_path + "media/music/alene-eremitt.mp3",
